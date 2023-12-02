@@ -1,0 +1,219 @@
+img[src*="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"] {display: none;}
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #181818;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
+    background-color: black;
+    box-shadow: 0px 4px 8px rgba(247, 244, 244, 0.1);
+}
+
+.header-name {
+    color: #fff;
+    font-size: 27px;
+    font-weight: bold;
+    text-shadow: 0px 2px 4px rgba(10, 159, 239, 0.9);
+}
+
+.header span {
+    color: #fdfefe;
+    font-size: 50px;
+    text-shadow:
+}
+
+/* Add this CSS to your stylesheet */
+.glow {
+  animation: glowAnimation 2s infinite;
+}
+
+@keyframes glowAnimation {
+  0% {
+      text-shadow: 0 0 5px #08cff2, 0 0 10px #08cff2, 0 0 15px #08cff2;
+  }
+  50% {
+      text-shadow: 0 0 20px #08cff2, 0 0 30px #08cff2, 0 0 40px #08cff2;
+  }
+  100% {
+      text-shadow: 0 0 5px #08cff2, 0 0 10px #08cff2, 0 0 15px #08cff2;
+  }
+}
+
+
+/* Container */
+.upload-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+    margin-bottom: 0px;
+}
+
+/* Image Upload Window */
+.image-upload-window {
+    width: 100%;
+    max-height: 100%;
+    min-height: 500px;
+    border: 0.1px solid white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+}
+
+.image-upload-window:hover {
+    border: 1px solid white;
+}
+
+/* Image Preview */
+.image-preview {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: none;
+}
+
+/* Enhance Button */
+#upload-button {
+  width: 100%;
+  margin-top: 20px;
+  border: 0.1px solid #fff;
+  background-color: #11273e;
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 20px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#upload-button:hover {
+  background-color: #14387c;
+  border: 1px solid #fff;
+}
+
+.material-symbols-outlined {
+  margin-right: 8px;
+  color: #d4d3d3;
+}
+
+.separator {
+  height: 20px;
+  width: 1px;
+  background-color: #fff;
+  margin: 0 10px;
+}
+
+
+/* Upload Icon and Text */
+.upload-icon {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.upload-icon span {
+    font-size: 70px;
+    color: #f0eded;
+    animation: colorChange 1s linear infinite alternate;
+}
+
+@keyframes colorChange {
+  from {
+      color: #bfbfbf; /* Low white */
+  }
+  to {
+      color: #ffffff; /* Bright white */
+  }
+}
+
+
+.upload-text {
+    text-align: center;
+    color: #aaa;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+
+
+
+.loading {
+  display: none;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 24px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.lds-ring {
+  display: inline-block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  position: relative;
+}
+
+
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 5px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fff transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
