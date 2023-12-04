@@ -29,13 +29,26 @@ body {
     text-shadow:
 }
 
+.file-count {
+    color: #fbf7f7;
+    background-color: #011a2e;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-around;
+    align-items: center;
+}
+
+h1 {
+    font-size: 15px;
+    color: #aeabab;
+}
+
+
+
 .img-area {
     margin: 10px;
 }
 
-h1 {
-    color: #8f8c8c;
-}
 
 #image-container {
     margin-top: 20px;
@@ -62,3 +75,4 @@ button {
 button:hover {
     background-color: #d32f2f;
 }
+

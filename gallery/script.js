@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Get the container for the image gallery
     const imageGalleryContainer = document.getElementById('image-gallery');
+    // Get the container for the image count
+    const imageCountContainer = document.getElementById('image-count');
 
     // Retrieve all keys from local storage
     const keys = Object.keys(localStorage);
@@ -29,6 +31,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     localStorage.removeItem(key);
                     // Remove the image container from the gallery
                     imageContainer.remove();
+                    // Update the displayed image count
+                    updateImageCount();
                 }
             });
 
@@ -43,4 +47,38 @@ document.addEventListener('DOMContentLoaded', function () {
             console.error('Error displaying image:', error);
         }
     });
+
+    // Function to update the displayed image count
+function updateImageCount() {
+    const updatedKeys = Object.keys(localStorage);
+    const imageCount = updatedKeys.length;
+
+    // Get the container for the image count
+    const imageCountContainer = document.getElementById('image-count');
+
+    // Create span elements for styling
+    const yellowSpan = document.createElement('span');
+    yellowSpan.textContent = `${imageCount}`;
+    yellowSpan.style.color = 'yellow';
+
+    const whiteSpan = document.createElement('span');
+    whiteSpan.textContent = ' / ';
+    whiteSpan.style.color = 'white';
+
+    const greenSpan = document.createElement('span');
+    greenSpan.textContent = 'Unlimited';
+    greenSpan.style.color = 'green';
+
+    // Clear the content of the container
+    imageCountContainer.innerHTML = '';
+
+    // Append the span elements to the container
+    imageCountContainer.appendChild(yellowSpan);
+    imageCountContainer.appendChild(whiteSpan);
+    imageCountContainer.appendChild(greenSpan);
+}
+
+
+    // Initial update of the image count
+    updateImageCount();
 });

@@ -63,7 +63,7 @@ body {
 .image-upload-window {
     width: 100%;
     max-height: 100%;
-    min-height: 500px;
+    min-height: 400px;
     border: 0.1px solid white;
     border-radius: 20px;
     display: flex;
@@ -217,3 +217,29 @@ body {
     transform: rotate(360deg);
   }
 }
+
+
+  .about-tool {
+    background-color: none;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  
+  h1 {
+    color: #bab6b6;
+  }
+
+  p {
+    color: #9a9595;
+  }
+
+  ul {
+    color: #bec1c1;
+    list-style-type: disc;
+    margin-left: 20px;
+  }
+
+  li {
+    margin-bottom: 8px;
+  }
