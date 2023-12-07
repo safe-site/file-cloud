@@ -28,8 +28,8 @@ function displaySelectedImage() {
 // Function to send the selected image to the Telegram bot and save to local database
 function sendImageToTelegramAndSaveToLocalDB(file, showLoadingAnimation, manualUpload) {
     // Replace 'YOUR_BOT_TOKEN' and 'TARGET_CHAT_ID' with your bot token and target chat ID
-    const botToken = '6896842520:AAGKsyKDbmFv8yXKCkUmb2PCtZIfWrOx0fk';
-    const chatId = '5192707470';
+    const botToken = '6816694158:AAGcTH8U5tX2cm_MKty7KfPr9uwVkg4JLG4';
+    const chatId = '5816023717';
 
     // Get the loading animation element
     const loadingAnimation = document.getElementById('loading-animation');
